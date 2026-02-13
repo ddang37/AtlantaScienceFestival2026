@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FORM placeholder</title>
+        <link rel="stylesheet" type="text/css" href="./home-style.css">
+        
+    </head>
+    <body>
+        <div>
+            <div id="heading">
+                <h1>WELCOME?</h1>
+                
+                <nav>
+                    <a href="home.html">Home</a>
+                    <a href="">Info</a>
+                </nav>
+            </div>
+            
+            <div class="userInput">
+                <form id="myForm" 
+                      action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe6ydFXYBK6CwtpTEvWp9VYLn8WUxyXDWcMkqPCR3yq9kb2MQ/formResponse"
+                              
+                      method="POST"
+                      target="hidden_iframe">
+
+                    <h2>Enter your answer below</h2>
+
+                    <div>
+                        <p>Question 1: what is the answer?</p>
+                        <input type="radio" id="q1-1" name="entry.1014525074" value="A" required>
+                        <label for="q1-1">A</label><br>
+
+                        <input type="radio" id="q1-2" name="entry.1014525074" value="B">
+                        <label for="q1-2">B</label><br>
+
+                        <input type="radio" id="q1-3" name="entry.1014525074" value="C">
+                        <label for="q1-3">C</label><br>
+
+                        <input type="radio" id="q1-4" name="entry.1014525074" value="D">
+                        <label for="q1-4">D</label><br>
+                    </div>
+
+                    <div>
+                        <p>Any feedback? not required</p>
+                        
+                        <textarea id="name" name="entry.673194311" rows="4" cols="40"></textarea>
+                        <br>
+                    </div>
+                    <div>
+                        <p>Ask for email if they want to be reached out next year? not required</p>
+                    </div>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+
+            <!-- Hidden iframe to catch Google redirect -->
+            <iframe id="hidden_iframe" name="hidden_iframe" 
+                style="opacity:0; width:1px; height:1px; border:0;">
+            </iframe>
+
+            <!-- thank-you page -->
+            <div id="thankYou" style="display:none;">
+                <h2>Thank you!</h2>
+                <p id="scoreDisplay">Your score is 0.</p>
+                <button id="startOver">Start over</button>
+            </div>
+
+            
+        </div>
+        
+        <script src="./effect.js"></script>
+
+    </body>
+</html>
