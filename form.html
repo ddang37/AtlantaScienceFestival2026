@@ -80,6 +80,13 @@
 
 
             </div>
+            
+            <!-- Hidden iframe to catch google form redirect, same URL no /u/0 but must ends in viewform?embedded=true -->
+            <iframe id="hidden_iframe" name="hidden_iframe"
+                src="https://docs.google.com/forms/d/e/1FAIpQLSe6ydFXYBK6CwtpTEvWp9VYLn8WUxyXDWcMkqPCR3yq9kb2MQ/viewform?embedded=true"
+                style="opacity:0; width:1px; height:1px; border:0; position:absolute; top:0; left:0; pointer-events:none;"
+                >
+            </iframe>
 
 
             <!-- thank you message display after submit -->
