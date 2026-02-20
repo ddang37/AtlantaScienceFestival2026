@@ -2,6 +2,36 @@
 
 
 
+// submit the quiz
+document.getElementById("quizForm").addEventListener("submit", function (e) {
+    e.preventDefault(); //stop browser from navigating to a different url
+    
+    document.querySelector(".userQuiz").style.display = "none";
+    document.getElementById("score").style.display = "block";
+
+    const maxScore = document.querySelectorAll('[name^="q"]').length / 4; // same format for name, and each MCQ has 4 options
+    let score = 0;
+
+    for (let i = 1; i <= maxScore; i++) {
+        const selected = document.querySelector(`input[name="q${i}"]:checked`);
+        if (selected && selected.value === "correct") {
+            score++;
+        }
+    }
+
+    
+    document.getElementById("quizScoreDisplay").textContent = "Your score: " + score + " / " + maxScore;
+});
+
+
+// Start over and clean data in the quiz form
+document.getElementById("quizStartOver").addEventListener("click", function () {
+    document.getElementById("quizForm").reset();
+    document.querySelector(".userQuiz").style.display = "block";
+    document.getElementById("score").style.display = "none";
+});
+
+
 // submit to the hidden Google form
 document.getElementById("myForm").addEventListener("submit", function () {
     document.querySelector(".userInput").style.display = "none";

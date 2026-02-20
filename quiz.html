@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quiz placeholder</title>
+        <link rel="stylesheet" type="text/css" href="./home-style.css">
+        
+    </head>
+    <body>
+        <div>
+            <header>
+                
+                <nav>
+                    <a href="home.html">Home</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="quiz.html">Quiz</a>
+                </nav>
+            </header>
+
+            <div class="userQuiz">
+                <!-- action need the URL ending in formResponse, removed /u/0 from the form/u/0/d/e-->
+                <form id="quizForm" 
+                    
+                    action=""
+                              
+                    method="POST"
+                    >
+
+                    <h2>Enter your answer below</h2>
+                    <!-- the value of each entry must match what's available on the google form: ABCD != correct/incorrect -->
+                    
+                    <p>Quizzing...</p>
+
+                    <div>
+                        <p>Question 1: correct is A</p>
+                        <input type="radio" name="q1" value="correct" required>
+                        <label for="q1a">A.</label><br>
+
+                        <input type="radio" name="q1" value="incorrect">
+                        <label for="q1b">B.</label><br>
+
+                        <input type="radio" name="q1" value="incorrect">
+                        <label for="q1c">C.</label><br>
+
+                        <input type="radio" name="q1" value="incorrect">
+                        <label for="q1d">D.</label><br>
+                    </div>
+                    
+                    <div>
+                        <p>Question 2: At what height does the thin air begin to unthread the mind itself?</p>
+                        <input type="radio" name="q2" value="incorrect" required>
+                        <label for="q2a">A. 14,000 feet</label><br>
+
+                        <input type="radio" name="q2" value="incorrect">
+                        <label for="q2b">B. 50,000 feet</label><br>
+
+                        <input type="radio" name="q2" value="incorrect">
+                        <label for="q2c">C. 9,000 feet</label><br>
+
+                        <input type="radio" name="q2" value="correct">
+                        <label for="q2d">D. 23,000 feet</label><br>
+                    </div>
+                    
+                    <input type="submit" value="Submit">
+                </form>
+
+
+
+            </div>
+
+
+            <!-- thank you message display after submit -->
+            <div id="score" style="display:none;">
+                <h2>Nice work!</h2>
+                <p id="quizScoreDisplay">Your quiz score is 0.</p>
+                <button id="quizStartOver">Start over</button>
+            </div>
+
+
+            
+        </div>
+        
+        <script src="./effect.js"></script>
+
+    </body>
+</html>
