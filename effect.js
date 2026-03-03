@@ -10,7 +10,7 @@ if (quizForm) {
         e.preventDefault(); //stop browser from navigating to a different url
         
         // iphone bug fix, remove focus
-        quizForm.querySelector('input[type="submit"]').getBoundingClientRect();
+        quizForm.querySelector('input[type="submit"]').blur();
 
         document.querySelector(".userQuiz").style.display = "none";
         document.getElementById("score").style.display = "block";
