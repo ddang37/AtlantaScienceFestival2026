@@ -9,34 +9,38 @@ html {
 }
 a { /* all links */
     text-decoration: none;
-    color: red;
+    color: darkred;
     font-size: 35px;
     margin-left: 80px;
     margin-right: 80px;
 }
 
 
+
 header, footer {
     font-family: "Eater", serif; /* spooky */
-    font-size: 50px;
     background-color: #e0ded7;
-
     width: 100%;
     padding: 10px 0;
 
 }
 
 footer {
+    color: darkred;
+    font-size: 25px;
     margin-top: auto;
     text-align: center;
+    font-style: italic;
+}
+.footer-text {
+    padding: 50px;
 }
 
-#footer {
-    color: black;
-}
+
 
 .wrapper {
     min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
 }
@@ -50,8 +54,8 @@ nav {
 h2 {
     /* font-family: "Henny Penny", serif;  less spooky */
     font-family: "Lacquer", system-ui;
-    color: white;
-    font-size: 30px;
+    color: lightcoral;
+    font-size: 40px;
     margin-left: 80;
 
 }
@@ -72,22 +76,89 @@ body {
 }
 
 
-.carousel { /* period is for class*/
-    overflow: hidden;
-    margin-top: 10%; /* depend on header's height to put header in the image*/
-}
-
-.item {
-    width: 500px;
-    max-width: 100%;
-    height: 400px;
-    max-height: 100%;
-    margin: 50px;
-}
 
 .profile_image {
     width: 100%;
     height: 100%;
+    max-width: 900px;
+    max-height: 1000px;
     object-fit: cover;
     display: block;
+}
+
+
+
+#quizScoreDisplay{
+    font-family: "Lacquer", system-ui;
+    color: white;
+    font-size: 30px;
+    font-style: italic;
+
+}
+
+input[type="radio"] {
+    width: 2em;
+    height: 2em;
+    
+}
+
+input[type="submit"], button {
+    background-color: lightcoral;
+    height: fit-content;
+    width: fit-content;
+    padding: 2%;
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 5%;
+    padding-right: 5%;
+    color: black;
+    border-radius: 30px;
+    
+}
+
+input[type="submit"]:active, button:active {
+    background-color: darkred;
+    color: white;
+
+}
+
+input[type="text"], textarea {
+    font-size: 25px;
+    background-color: #e0ded7;
+    padding: 2%;
+
+}
+
+input[type="text"] {
+    width: 50%;
+    min-height: 40px;
+    
+}
+
+textarea {
+    
+    width: 70%;
+    min-height: 400px;
+}
+
+.banner {
+    width: 100%;
+    display: block;
+}
+
+#welcome {
+    margin: 0 10%;
+    text-align: center;
+
+    color: lightcoral;
+    font-family: "Lacquer", system-ui;
+
+}
+
+#content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Quiz placeholder</title>
+        <title>Quiz</title>
         <link rel="stylesheet" type="text/css" href="./home-style.css">
         
     </head>
@@ -25,28 +25,33 @@
                     method="POST"
                     >
 
-                    <h2>Enter your answer below</h2>
+                    <h2>The ghosts are curious - how much do you remember?</h2>
                     <!-- the value of each entry must match what's available on the google form: ABCD != correct/incorrect -->
                     
-                    <p>Quizzing...</p>
+
 
                     <div>
-                        <p>Question 1: correct is A</p>
-                        <input type="radio" name="q1" value="correct" required>
-                        <label for="q1a">A.</label><br>
+                        <img class="profile_image" src="image/archimedes.jpg">
+                        <p>Question 1: There is significant historical controversy surrounding the circumstances of Archimedes's death. 
+                            What is a common misinterpretation that diminishes the magnitude of his overall contributions to science and mathematics?
+                        </p>
+                        <input type="radio" name="q1" value="incorrect" required>
+                        <label for="q1a">A. That he willingly surrendered to the Roman army during the siege of Syracuse</label><br>
+
+                        <input type="radio" name="q1" value="correct">
+                        <label for="q1b">B. That he was killed while obsessively working on a math problem, saying “Do not disturb my circles,” reducing his legacy to a dramatized anecdote</label><br>
 
                         <input type="radio" name="q1" value="incorrect">
-                        <label for="q1b">B.</label><br>
+                        <label for="q1c">C. That he betrayed Syracuse by sharing his inventions with Rome</label><br>
 
                         <input type="radio" name="q1" value="incorrect">
-                        <label for="q1c">C.</label><br>
-
-                        <input type="radio" name="q1" value="incorrect">
-                        <label for="q1d">D.</label><br>
+                        <label for="q1d">D. That his military inventions were exaggerated and never actually used in battle</label><br>
                     </div>
-                    
+                    <br>
+                    <br>
                     <div>
-                        <p>Question 2: At what height does the thin air begin to unthread the mind itself?</p>
+                        <img class="profile_image" src="image/zenith.jpg">
+                        <p>Question 2: From the Zenith hot air balloon tragedy, at what height does the thin air begin to unthread the mind itself?</p>
                         <input type="radio" name="q2" value="incorrect" required>
                         <label for="q2a">A. 14,000 feet</label><br>
 
@@ -59,8 +64,44 @@
                         <input type="radio" name="q2" value="correct">
                         <label for="q2d">D. 23,000 feet</label><br>
                     </div>
-                    
-                    <input type="submit" value="submit">
+                    <br>
+                    <br>
+                    <div>
+                        <img class="profile_image" src="image/marie_curie.jpg">
+                        <p>Question 3: What elements did Marie Curie isolate, leading to her second Nobel Prize?</p>
+                        <input type="radio" name="q3" value="incorrect" required>
+                        <label for="q3a">A. Uranium and Thorium</label><br>
+
+                        <input type="radio" name="q3" value="incorrect">
+                        <label for="q3b">B. Hydrogen and Oxygent</label><br>
+
+                        <input type="radio" name="q3" value="incorrect">
+                        <label for="q3c">C. Gold and Silver</label><br>
+
+                        <input type="radio" name="q3" value="correct">
+                        <label for="q3d">D. Radium and Polonium</label><br>
+                    </div>
+                    <br>
+                    <br>
+                    <div>
+                        <img class="profile_image" src="image/carl.jpg">
+                        <p>Question 4: What did Carl Wilhelm Scheele contribute to the scientific community?
+                        </p>
+                        <input type="radio" name="q4" value="incorrect" required>
+                        <label for="q4a">A. Discovered an approximation for π</label><br>
+
+                        <input type="radio" name="q4" value="incorrect">
+                        <label for="q4b">B. Discovered a cure to the common cold</label><br>
+
+                        <input type="radio" name="q4" value="correct">
+                        <label for="q4c">C. Discovered oxygen</label><br>
+
+                        <input type="radio" name="q4" value="incorrect">
+                        <label for="q4d">D. Discovered the relationship between energy and work</label><br>
+                    </div>
+                    <br>
+                    <br>
+                    <input type="submit" value="Submit">
                 </form>
 
 
@@ -70,13 +111,13 @@
 
             <!-- thank you message display after submit -->
             <div id="score" style="display:none;">
-                <h2>Nice work!</h2>
+                <h2 class="endText">Quiz submitted! Your curiosity is exactly what drives science forward.</h3>
                 <p id="quizScoreDisplay">Your quiz score is 0.</p>
-                <button id="quizStartOver">Start over</button>
+                <button id="quizStartOver">Revisit the Mystery</button>
             </div>
 
             <footer>
-                <h2 id="footer">Ghost tour presented by GaTech STEMComm @2026</h2>
+                <h3 id="footer-text">Einstein's Ghost Tour - Presented by GaTech STEMComm @2026</h2>
             </footer>
             
         </div>

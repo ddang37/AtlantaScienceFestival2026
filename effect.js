@@ -23,7 +23,7 @@ if (quizForm) {
         }
 
         document.getElementById("quizScoreDisplay").textContent = 
-            "Your score: " + score + " / " + maxScore;
+            "" + score + " out of " + maxScore + " ghosts approved of your answer!";
     });
 
     // Start over and clean data in the quiz form
@@ -50,7 +50,7 @@ if (feedback) {
             score += 1;
         }
 
-        document.getElementById("scoreDisplay").textContent = "Your score: " + score + " / " + maxScore;
+        // document.getElementById("scoreDisplay").textContent = "Your score: " + score + " / " + maxScore;
     });
 
     // Start over and clean data in the form
