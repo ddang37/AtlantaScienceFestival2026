@@ -7,6 +7,11 @@ const quizForm = document.getElementById("quizForm");
 
 if (quizForm) {
     quizForm.addEventListener("submit", function (e) {
+        if (!quizForm.checkValidity()) {
+            // safari should show warning if a required option not selected
+            return;
+        }
+
         e.preventDefault(); //stop browser from navigating to a different url
         
         // iphone bug fix, remove focus
