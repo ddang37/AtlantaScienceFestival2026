@@ -9,6 +9,12 @@ if (quizForm) {
     quizForm.addEventListener("submit", function (e) {
         if (!quizForm.checkValidity()) {
             // safari should show warning if a required option not selected
+            const firstInvalid = quizForm.querySelector(':invalid');
+            if (firstInvalid) {
+                firstInvalid.scrollIntoView({ behavior: "smooth", block: "center" });
+            }
+
+            quizForm.reportValidity();
             return;
         }
 
