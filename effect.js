@@ -9,6 +9,9 @@ if (quizForm) {
     quizForm.addEventListener("submit", function (e) {
         e.preventDefault(); //stop browser from navigating to a different url
         
+        // iphone bug fix, remove focus
+        quizForm.querySelector('input[type="submit"]').getBoundingClientRect();
+
         document.querySelector(".userQuiz").style.display = "none";
         document.getElementById("score").style.display = "block";
 
